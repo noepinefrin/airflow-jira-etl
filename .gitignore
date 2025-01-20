@@ -1,0 +1,40 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore Airflow logs
+logs/
+
+# Ignore local configuration files
+*.env
+*.local
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage reports
+.coverage
+htmlcov/
+*.cover
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore other temporary files
+*.tmp
+*.log
