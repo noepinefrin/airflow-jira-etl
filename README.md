@@ -1,4 +1,5 @@
 # Jira Data Integration Pipeline
+![alt text](img/worklog_example.jpeg)
 
 A comprehensive Apache Airflow implementation for fetching and managing Jira data through multiple APIs. This project provides automated solutions for retrieving and storing Jira issues, users, and Tempo worklogs in various SQL databases (PostgreSQL, MySQL, MSSQL).
 
@@ -57,8 +58,8 @@ A comprehensive Apache Airflow implementation for fetching and managing Jira dat
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd jira-data-pipeline
+   git clone https://github.com/noepinefrin/airflow-jira-etl.git
+   cd airflow-jira-etl
    ```
 
 2. **Configure environment variables**
@@ -67,8 +68,6 @@ A comprehensive Apache Airflow implementation for fetching and managing Jira dat
    # Airflow settings
    AIRFLOW_UID=50000
    AIRFLOW_GID=0
-   _AIRFLOW_WWW_USER_USERNAME=airflow
-   _AIRFLOW_WWW_USER_PASSWORD=airflow
 
    # Jira Configuration
    JIRA_ATLASSIAN_DOMAIN_NAME=your-domain
@@ -76,9 +75,9 @@ A comprehensive Apache Airflow implementation for fetching and managing Jira dat
    TEMPO_API_BEARER_TOKEN=your_tempo_token
 
    # Database Settings
-   JIRA_TEMPO_WORKLOG_SQL_TABLE_NAME=jira_tempo_worklogs
-   JIRA_USER_SQL_TABLE_NAME=jira_users
-   JIRA_ISSUE_SQL_TABLE_NAME=jira_issues
+   JIRA_TEMPO_WORKLOG_SQL_TABLE_NAME=AF_JIRA_WORKLOGS
+   JIRA_USER_SQL_TABLE_NAME=AF_JIRA_USERS
+   JIRA_ISSUE_SQL_TABLE_NAME=AF_JIRA_ISSUES
 
    # Database Connection (Choose one based on your database)
    AIRFLOW_CONN_POSTGRES_DEFAULT=postgresql://airflow:airflow@postgres/airflow
@@ -207,7 +206,7 @@ docker compose run airflow-worker airflow connections test [conn_id]
 2. Create a feature branch
 3. Implement changes
 4. Add tests
-5. Submit pull request
+5. Submit a pull request
 
 ## License
 
